@@ -1,13 +1,8 @@
-﻿using ClothingShop.Core;
-using ClothingShop.Entities;
-using ClothingShop.Entities.Products;
-using ClothingShop.Entities.Products.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace ProductInventory
+﻿namespace ProductInventory
 {
+    using ClothingShop.Core;
+    using ClothingShop.Entities;
+
     class Program
     {
         static void Main(string[] args)

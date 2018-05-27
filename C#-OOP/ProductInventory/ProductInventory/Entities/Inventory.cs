@@ -1,14 +1,12 @@
-﻿using ClothingShop.Entities.Contracts;
-using ClothingShop.Entities.Factories;
-using ClothingShop.Entities.Products;
-using ClothingShop.Entities.Products.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace ClothingShop.Entities
+﻿namespace ClothingShop.Entities
 {
+    using ClothingShop.Entities.Contracts;
+    using ClothingShop.Entities.Factories;
+    using ClothingShop.Entities.Products.Contracts;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class Inventory : IInventory
     {
         private List<IProduct> products;
@@ -20,7 +18,7 @@ namespace ClothingShop.Entities
             this.factory = new ProductFactory();
         }
 
-        public void AddProductToInventory(Product product)
+        public void AddProductToInventory(IProduct product)
         {
             products.Add(product);
         }

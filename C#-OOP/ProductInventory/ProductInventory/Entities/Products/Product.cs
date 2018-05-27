@@ -1,8 +1,8 @@
-﻿using ClothingShop.Entities.Products.Contracts;
-using System;
-
-namespace ClothingShop.Entities.Products
+﻿namespace ClothingShop.Entities.Products
 {
+    using ClothingShop.Entities.Products.Contracts;
+    using System;
+
     public abstract class Product : IProduct
     {
         public Product(double price, Size size, string manufacturer)

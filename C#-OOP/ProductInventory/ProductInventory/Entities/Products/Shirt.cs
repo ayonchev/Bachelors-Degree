@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ClothingShop.Entities.Products
+﻿namespace ClothingShop.Entities.Products
 {
     public class Shirt : Product
     {

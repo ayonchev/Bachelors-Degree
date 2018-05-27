@@ -1,13 +1,10 @@
-﻿using ClothingShop.Entities.Products;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ClothingShop.Entities.Contracts
+﻿namespace ClothingShop.Entities.Contracts
 {
+    using ClothingShop.Entities.Products.Contracts;
+
     public interface IInventory
     {
-        void AddProductToInventory(Product product);
+        void AddProductToInventory(IProduct product);
 
         void AddStockOnProduct(int value, string productType);
 

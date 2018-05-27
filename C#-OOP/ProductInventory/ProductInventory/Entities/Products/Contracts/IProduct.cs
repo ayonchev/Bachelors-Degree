@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ClothingShop.Entities.Products.Contracts
+﻿namespace ClothingShop.Entities.Products.Contracts
 {
     public interface IProduct
     {
