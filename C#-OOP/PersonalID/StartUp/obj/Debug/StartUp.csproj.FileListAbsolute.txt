@@ -1,7 +1,0 @@
-C:\Projects\Plovdiv-University-Projects\C#-OOP\PersonalID\StartUp\bin\Debug\StartUp.exe.config
-C:\Projects\Plovdiv-University-Projects\C#-OOP\PersonalID\StartUp\bin\Debug\StartUp.exe
-C:\Projects\Plovdiv-University-Projects\C#-OOP\PersonalID\StartUp\bin\Debug\StartUp.pdb
-C:\Projects\Plovdiv-University-Projects\C#-OOP\PersonalID\StartUp\obj\Debug\StartUp.csprojResolveAssemblyReference.cache
-C:\Projects\Plovdiv-University-Projects\C#-OOP\PersonalID\StartUp\obj\Debug\StartUp.csproj.CoreCompileInputs.cache
-C:\Projects\Plovdiv-University-Projects\C#-OOP\PersonalID\StartUp\obj\Debug\StartUp.exe
-C:\Projects\Plovdiv-University-Projects\C#-OOP\PersonalID\StartUp\obj\Debug\StartUp.pdb
