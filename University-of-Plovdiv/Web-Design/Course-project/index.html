@@ -1,0 +1,163 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <title>Audi A7 Official</title>
+</head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand pl-3" href="#fullscreen-wrapper">
+                <img src="images/audi-logo.png" id="logo" alt="logo">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+				<div class="navbar-nav ml-auto pr-3">
+					<a class="nav-item nav-link" href="#interior">Interior</a>
+					<a class="nav-item nav-link" href="#exterior">Exterior</a>
+					<a class="nav-item nav-link" href="#lights">Lights</a>
+					<a class="nav-item nav-link" href="#contact-us">Contact Us</a>
+				</div>
+            </div>
+        </nav>
+
+        <header class="responsive-container">
+            <div id="fullscreen-wrapper">
+                <video src="videos/audi_a7_trailer.mp4" id="background-video" autoplay muted loop></video>
+            </div>
+            <div class="video-overlay"></div>
+        </header>
+
+        <section id="interior">
+            <div class="container p-4">
+                <h2>Interior</h2>
+                <hr />
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <img src="images/2019_audi_a7_25_1920x1080.jpg" class="img-fluid" alt="interior" />
+            </div>
+        </section>
+
+        <section id="exterior">
+            <div class="container p-4">
+                <h2 class="text-right">Exterior</h2>
+                <hr />
+                <div class="row d-md-flex">
+                    <div class="col-md-6 mb-3">
+                        <img src="images/2018-audi-a7-blue-side.jpg" class="img-fluid" alt="audi a7 side" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <img src="images/2018-audi-a7-blue-back.jpg" class="img-fluid" alt="audi a7 back" />
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <img src="images/2018-audi-a7-blue-front.jpg" class="img-fluid" alt="audi a7 front" />
+                    </div>
+                </div>
+
+                <p class="mt-3 text-center">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+                </p>
+            </div>
+        </section>
+
+        <section id="lights" class="mb-4">
+            <div class="container p-4">
+                <h2>Lights</h2>
+                <h6 class="text-uppercase text-muted">Bright.Brighter.Laser...</h6>
+                <hr />
+                <div class="row d-flex">
+                    <div class="col-md-6">
+                        <img src="images/2018-audi-a7-lights.jpg" class="img-fluid" alt="Audi A7 Lights" />
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                </div>
+        </section>
+        
+        <section id="contact-us" class="bg-secondary mt-4">
+            <div class="container p-4">
+				<h2 class="text-right text-white">Contact Us</h2>
+				<hr class="bg-white" />
+                <form>
+                    <div class="row d-flex justify-content-between pt-4">
+						<div class="form-group col-md-5">
+							<input type="text" name="names" id="names" class="form-control" placeholder="Enter your names" />
+						</div>
+                        <div class="form-group col-md-7">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" />
+                        </div>
+						<div class="form-group col-md-12">
+							<textarea class="form-control" name="message" placeholder="Enter Message"></textarea>
+						</div>
+						<div class="form-group col-md-3 ml-auto">
+							<button type="button" class="btn btn-outline-light">Submit</button>
+						</div>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+        
+        <footer id="main-footer" class="text-muted p-2">
+            <div class="row align-items-center">
+                <div class="col-md-6" id="audi-brand">
+                    <p class="pl-3">&copy;2018 Audi. All rights reserved.</p>
+                </div>
+                <div id="media-menu" class="col-md-6 text-right pr-4">
+                    <p class="pr-3">Follow us:</p>
+                    <div class="nav">
+                        <a class="nav-link" href="https://www.youtube.com/user/Audi"><i class="fab fa-youtube"></i></a>
+                        <a class="nav-link" href="https://www.facebook.com/audi/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="nav-link" href="https://twitter.com/Audi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+                        <a class="nav-link" href="https://www.instagram.com/audi/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                if ($(window).width() < 1400) {
+                    $("#fullscreen-wrapper").addClass("embed-responsive");
+                    $("#fullscreen-wrapper").addClass("embed-responsive-16by9");
+                    $("#background-video").addClass("embed-responsive-item");
+                }
+            });
+        </script>
+
+		<script>
+			$(function () {
+				// Smooth Scrolling
+				$('a[href*="#"]:not([href="#"])').click(function () {
+					if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+						if (target.length) {
+							$('html, body').animate({
+								scrollTop: target.offset().top
+							}, 1000);
+							return false;
+						}
+					}
+				});
+			});
+		</script>
+    </body>
+</html>

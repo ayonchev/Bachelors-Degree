@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNet.Identity
+@model Forum.Data.Models.Post[]
+@{
+	ViewBag.Title = "Home Page";
+}
+
+<h1>@ViewBag.Message</h1>
+<div class="row">
+	<form action="/" method="post">
+		<div class="form-group">
+			<div class="col-md-11">
+				<input type="text" name="searchString" id="search-input" placeholder="Search the posts titles..." value="@(ViewBag.SearchString ?? "")" class="form-control" />
+			</div>
+			<div class="col-md-1">
+				<button type="submit" id="search-button" class="btn btn-primary">Search</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<hr />
+
+<div class="list-group">
+	@foreach (var post in @Model.OrderByDescending(p => p.DateCreated))
+	{
+		<div class="list-group-item">
+			<div class="btn-group pull-right">
+			    <a href="/Posts/Details/@post.Id" class="btn btn-primary">View</a>
+                @if (User.Identity.GetUserId() != null)
+                {
+                    <a href="/Posts/Edit/@post.Id" class="btn btn-primary">Edit</a>
+                    <a href="/Posts/Delete/@post.Id" class="btn btn-primary" id="delete-post">Delete</a>
+                }
+			</div>
+			<div>
+				<h2>@post.Title</h2>
+				<h4>
+					@if (post.Content.Length > 80)
+					{
+						@(post.Content.Substring(0, 80) + "...")
+					}
+					else
+					{
+						@post.Content
+					}
+				</h4>
+			</div>
+
+		</div>
+	}
+</div>

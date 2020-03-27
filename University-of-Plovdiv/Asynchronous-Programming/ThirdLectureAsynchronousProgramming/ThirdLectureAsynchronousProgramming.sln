@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.ParallelSearching", "ThirdLectureAsynchronousProgramming\1.ParallelSearching.csproj", "{EB2CF934-2202-4ACB-8F99-0DE0A4A16CC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.ThreadPool", "2.ThreadPool\2.ThreadPool.csproj", "{0CB88AC7-B2BF-41AC-B5B2-285388025468}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB2CF934-2202-4ACB-8F99-0DE0A4A16CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB2CF934-2202-4ACB-8F99-0DE0A4A16CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB2CF934-2202-4ACB-8F99-0DE0A4A16CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB2CF934-2202-4ACB-8F99-0DE0A4A16CC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CB88AC7-B2BF-41AC-B5B2-285388025468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CB88AC7-B2BF-41AC-B5B2-285388025468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CB88AC7-B2BF-41AC-B5B2-285388025468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CB88AC7-B2BF-41AC-B5B2-285388025468}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6E55C68-5823-477E-B53F-264A183C629A}
+	EndGlobalSection
+EndGlobal

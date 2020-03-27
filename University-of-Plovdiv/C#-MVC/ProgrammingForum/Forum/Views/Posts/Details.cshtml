@@ -1,0 +1,66 @@
+﻿@model Forum.Data.Models.Post
+
+@{
+	ViewBag.Title = "Details";
+}
+
+<div class="row post-container">
+    <div class="col-md-offset-2 col-md-8 post-data-container">
+        <div class="row">
+            <h4 class="col-md-6">
+                @Model.Author.UserName
+            </h4>
+            <h4 class="col-md-6 text-right">
+                <small>@Model.DateCreated.ToString("G")</small>
+            </h4>
+        </div>
+        <hr />
+
+        <h1>@Model.Title</h1>
+
+        <p class="lead">@Model.Content</p>
+        @if (Model.ImagePath != null)
+        {
+            <div class="text-center image-container">
+                <img src="~/Images/@Model.ImagePath" />
+            </div>
+        }
+    </div>
+</div>
+
+<div class="panel-group col-md-offset-2 col-md-8">
+@foreach (var comment in @Model.Comments.OrderByDescending(c => c.DateCreated))
+{
+	<div class="panel panel-default">
+	    <div class="panel-heading">
+	        <div class="row">
+	            <h5 class="col-md-6">
+	                @comment.Author.UserName
+	            </h5>
+	            <h4 class="col-md-6 text-right">
+	                <small>@Model.DateCreated.ToString("G")</small>
+	            </h4>
+	        </div>
+	        
+	    </div>
+		<div class="panel-body">
+			<p class="lead">@comment.Content</p>
+		</div>
+	</div>
+}
+</div>
+
+<div class="row">
+	<form action="/Posts/AddComment" method="post">
+		@Html.Hidden("PostId", Model.Id)
+		<div class="form-horizontal text-center">
+			<div class="form-group text-center">
+				<label class="control-label" for="comment">Comment</label>
+				<textarea name="Content" class="form-control" rows="3" id="comment" placeholder="Comment..."></textarea>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Add comment" class="btn btn-default"/>
+			</div>
+		</div>
+	</form>
+</div>

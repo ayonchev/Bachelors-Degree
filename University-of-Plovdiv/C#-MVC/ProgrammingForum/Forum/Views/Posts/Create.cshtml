@@ -1,0 +1,40 @@
+﻿@model Forum.ViewModels.PostViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>@ViewBag.Title</h2>
+<hr />
+
+<form action="/Posts/Create" method="post" enctype="multipart/form-data">
+	<div class="form-horizontal">
+		<div class="form-group">
+			<label class="control-label col-md-2" for="title">Title</label>
+			<div class="col-md-10">
+				<input type="text" name="Title" id="title" placeholder="Title" class="form-control" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-md-2" for="content">Content</label>
+			<div class="col-md-10">
+				<textarea name="Content" class="form-control" rows="3" id="content" placeholder="Content..."></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-md-2" for="problemImage">Image Describing The Problem</label>
+			<div class="col-md-10">
+				<input type="file" name="ProblemImage" id="problemImage" class="form-control" />
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10">
+				<input type="submit" value="Create" class="btn btn-default" />
+			</div>
+		</div>
+	</div>
+</form>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

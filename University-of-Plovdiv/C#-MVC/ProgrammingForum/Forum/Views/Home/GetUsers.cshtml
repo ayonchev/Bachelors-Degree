@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNet.Identity
+@model Forum.Data.Models.ApplicationUser[]
+@{
+    ViewBag.Title = "GetUsers";
+}
+
+<h2>List of all users: </h2>
+<hr />
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>User Id</th>
+        <th>Username</th>
+        <th>Number of posts</th>
+        <th>Number of comments</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        
+        <tr class="@(User.Identity.GetUserName() == user.UserName ? "bg-info" : "")">
+            <td>@user.Id</td>
+            <td>@user.UserName</td>
+            <td>@user.Posts.Count</td>
+            <td>@user.Comments.Count</td>
+        </tr>
+    }
+</table>

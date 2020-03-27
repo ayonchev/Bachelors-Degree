@@ -1,0 +1,89 @@
+CREATE TABLE Customers(
+	Id INT PRIMARY KEY IDENTITY,
+	FirstName NVARCHAR(50) NOT NULL,
+	LastName NVARCHAR(50) NOT NULL,
+	Email NVARCHAR(100) NOT NULL,
+	IdentityNumber CHAR(10) UNIQUE NOT NULL,
+	BirthDate DATETIME2
+)
+
+CREATE TABLE Flights(
+	FlightId CHAR(7) PRIMARY KEY,
+	DestinationCity NVARCHAR(100) NOT NULL,
+	DestinationCountry NVARCHAR(100) NOT NULL,
+	TakeOffDate DATETIME2 NOT NULL,
+	Price DECIMAL(15, 2) NOT NULL CHECK(Price > 0)
+)
+
+CREATE TABLE Reservations(
+	CustomerId INT FOREIGN KEY REFERENCES Customers,
+	FlightId CHAR(7) FOREIGN KEY REFERENCES Flights,
+	ReservationDate DATETIME2 NOT NULL,
+	CONSTRAINT PK_CustomerId_FlightId PRIMARY KEY(CustomerId, FlightId)
+)
+
+ALTER TABLE Customers
+ADD PhoneNumber VARCHAR(20) NOT NULL
+
+INSERT INTO Customers(FirstName, LastName, Email, PhoneNumber, BirthDate, IdentityNumber) VALUES 
+('Peter', 'Pan', 'peter@happy.com', '087599812', '11/11/1973', '1234567890'),
+('John', 'Doe', 'john@doe.com', '089933812', '10/29/1987', '3560123391')
+
+INSERT INTO Flights(FlightId, DestinationCity, DestinationCountry, TakeOffDate, Price) VALUES
+('CR1251D', 'Berlin', 'Germany', '01/01/2019', 169),
+('BD3761A', 'Sofia', 'Bulgaria', '12/12/2018', 50)
+
+
+INSERT INTO Reservations(CustomerId, FlightId, ReservationDate) VALUES 
+(1, 'CR1251D', '10/20/2018'),	
+(2, 'CR1251D', '9/29/2018')
+
+UPDATE Reservations
+SET ReservationDate = CONVERT(DATETIME2, '22.12.2016 15:20', 104)
+WHERE FlightId = 'CR1251D'
+
+DELETE FROM Flights
+WHERE DestinationCity = 'Marrakech' AND TakeOffDate = CONVERT(DATETIME2, '20.12.2016', 104)
+
+--DB PCTRADE
+SELECT e.FNAME, e.LNAME, d.NAME 
+FROM EMPLOYEES AS e
+JOIN DEPARTMENTS AS d ON d.DEPARTMENT_ID = e.DEPARTMENT_ID
+WHERE DATEDIFF(year, HIRE_DATE, GETDATE()) > 26
+
+SELECT JOB_TITLE FROM JOBS
+WHERE MIN_SALARY > 5000
+ORDER BY MIN_SALARY DESC
+
+SELECT e.FNAME, e.LNAME, e.SALARY, j.JOB_TITLE
+FROM EMPLOYEES AS e
+JOIN JOBS AS j
+  ON j.JOB_ID = e.JOB_ID
+LEFT JOIN ORDERS AS o
+  ON o.EMPLOYEE_ID = e.EMPLOYEE_ID
+WHERE DEPARTMENT_ID = 80 AND o.EMPLOYEE_ID IS NULL
+
+
+SELECT c.FNAME, c.LNAME, o.ORDER_ID, res.Price 
+FROM CUSTOMERS AS c
+JOIN ORDERS AS o
+  ON o.CUSTOMER_ID = c.CUSTOMER_ID
+JOIN (
+SELECT oi.ORDER_ID AS OrderId,
+	   SUM(oi.UNIT_PRICE * oi.QUANTITY) AS Price
+  FROM ORDERS AS o
+  JOIN ORDER_ITEMS AS oi
+    ON oi.ORDER_ID = o.ORDER_ID
+GROUP BY oi.ORDER_ID ) AS res
+  ON o.ORDER_ID = res.OrderId
+
+GO
+
+CREATE VIEW v_Products_Orders AS
+SELECT p.NAME,
+	   COUNT(oi.ORDER_ID) AS CountOrders
+  FROM Products AS p
+  JOIN ORDER_ITEMS AS oi
+    ON oi.PRODUCT_ID = p.PRODUCT_ID
+GROUP BY p.PRODUCT_ID, p.Name
+HAVING COUNT(oi.ORDER_ID > 3)
