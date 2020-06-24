@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Images\action.jpg" />
+    <None Remove="Assets\Images\adventure.jpg" />
+    <None Remove="Assets\Images\comedy.jpeg" />
+    <None Remove="Assets\Images\documentary.jpg" />
+    <None Remove="Assets\Images\fast_and_furios.png" />
+    <None Remove="Assets\Images\horror.jpg" />
+    <None Remove="Assets\Images\interstellar.jpg" />
+    <None Remove="Assets\Images\mask_of_zorro.jpg" />
+    <None Remove="Assets\Images\mr_robot.jpg" />
+    <None Remove="Assets\Images\mystery.jpg" />
+    <None Remove="Assets\Images\romance.jpg" />
+    <None Remove="Assets\Images\sci_fi.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\action.jpg" />
+    <EmbeddedResource Include="Assets\Images\adventure.jpg" />
+    <EmbeddedResource Include="Assets\Images\comedy.jpeg" />
+    <EmbeddedResource Include="Assets\Images\documentary.jpg" />
+    <EmbeddedResource Include="Assets\Images\fast_and_furios.png" />
+    <EmbeddedResource Include="Assets\Images\horror.jpg" />
+    <EmbeddedResource Include="Assets\Images\interstellar.jpg" />
+    <EmbeddedResource Include="Assets\Images\mask_of_zorro.jpg" />
+    <EmbeddedResource Include="Assets\Images\mr_robot.jpg" />
+    <EmbeddedResource Include="Assets\Images\mystery.jpg" />
+    <EmbeddedResource Include="Assets\Images\romance.jpg" />
+    <EmbeddedResource Include="Assets\Images\sci_fi.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\NavPage.xaml.cs">
+      <DependentUpon>NavPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MovieListPage.xaml.cs">
+      <DependentUpon>MovieListPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\GenresPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NavPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MovieCreateEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MovieDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
