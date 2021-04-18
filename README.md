@@ -15,12 +15,14 @@ I've listed the courses that have helped me the most grow as a Software Engineer
   - In this course we actually studied the *ASP.NET MVC* and built a simple project
 - [Databases](https://github.com/ayonchev/Bachelors-Degree/tree/master/University-of-Plovdiv/Databases)
 - [Asynchronous programming with C#](https://github.com/ayonchev/Bachelors-Degree/tree/master/University-of-Plovdiv/Asynchronous-Programming)
-  - In this elective course I was introduced to threads, tasks and parallel programming in C#
+  - In this elective course I was introduced to threads, tasks and parallel programming in *C#*
 - [Designing Mobile Applications](https://github.com/ayonchev/Bachelors-Degree/tree/master/University-of-Plovdiv/Designing-Mobile-Applications)
   - In this course I created only the design of a mobile application using *Xamarin.Forms* and in the course specified below I created a fully functioning application 
 - [Programming Mobile Applications](https://github.com/ayonchev/Phonebook)
 
 ## Eötvös Loránd University
 
-- Computer Systems
+- [Computer Systems](https://github.com/ayonchev/Bachelors-Degree/tree/master/Eotvos-Lorand-University/Computer-Systems)
   - In this course we studied Linux commands, shell scripting in Linux and shell scripting in Windows using *PowerShell*
+- [Software Technologies](https://github.com/ayonchev/Bachelors-Degree/tree/master/Eotvos-Lorand-University/Software-Technologies)
+  - In this course we had to build a tower defense game. The main purpose was to take us through the whole **Software Development Life Cycle**. We went through requirements gathering, planning, development, testing and we also had to configure a CI pipeline. The game was developed with *WPF* and *C#* and was uploaded to ELTE's GitLab server. The models were created by my teammate.
