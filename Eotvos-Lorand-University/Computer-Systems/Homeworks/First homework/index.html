@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Version Control Systems</title>
+</head>
+<body>
+    <header id="site-header">
+        <h1 id="site-title">Version Control Systems</h1>
+        <nav id="site-menu">
+            <ul>
+                <li class="nav-item">
+                    <a href="#vcs-overview" class="link">What is version control</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#git" class="link">Git</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#popularity" class="link">Popularity</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section class="article-section">
+            <h2 class="section-title">What is version control?</h2>
+            <div class="section-main-content"
+            id="vcs-overview">
+                <p>
+                    Software developers working in teams are continually writing new source code and changing existing source code. The code for a project, app or software component is typically organized in a folder structure or "file tree". One developer on the team may be working on a new feature while another developer fixes an unrelated bug by changing code, each developer may make their changes in several parts of the file tree.
+                    
+                    Version control systems help teams solve these kinds of problems, tracking every individual change by each contributor and helping prevent concurrent work from conflicting. Changes made in one part of the software can be incompatible with those made by another developer working at the same time. This problem should be discovered and solved in an orderly manner without blocking the work of the rest of the team. Further, in all software development, any change can introduce new bugs on its own and new software can't be trusted until it's tested. So testing and development proceed together until a new version is ready.
+                </p>
+                <div class="image-container" >
+                    <img src="images/1_YO3XrKVMEgTZ6UJZRntXPQ.jpeg" alt="source control overview" class="img" />
+                </div>
+        </div>
+        </section>
+
+        <section class="article-section" id="git">
+            <h2 class="section-title">Git</h2>
+            <div class="section-main-content">
+                <p>
+                    Git is an open-source distributed version control system developed by the creator of Linux operating system kernel - Linus Torvalds. Because of the fact that the architecture of Git is distributed, every developer's working copy of the code is also a repository which can contain the full history of all changes. That is the big difference between Git and other version control systems like SVN or CVS, where the full version history is stored only in one place.
+                </p>
+                <div id="types-of-vcs">
+                    <div>
+                        <img src="images/cvcs.png" alt="centralized verison control systems" class="img">
+                    </div>
+                    <div>
+                        <img src="images/dvcs.png" alt="centralized verison control systems" class="img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="popularity" class="article-section">
+            <h2 class="section-title">Popularity</h2>
+            <div class="section-main-content">
+                <table id="popularity-table">
+                    <tr>
+                        <th>Number of repositories</th>
+                        <th>2010</th>
+                        <th>2011</th>
+                        <th>2012</th>
+                        <th>2013</th>
+                        <th>2014</th>
+                        <th>2016</th>
+                        <th>2018</th>
+                        <th>2019</th>
+                        <th>2020</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Git
+                        </th>
+                        <td>26,485</td>
+                        <td>116,224</td>
+                        <td>134,459</td>
+                        <td>238,648</td>
+                        <td>247,103</td>
+                        <td>274,605</td>
+                        <td>600,724</td>
+                        <td>913,378</td>
+                        <td>945,352</td>
+                    </tr>
+                    <tr>
+                        <th>SVN</th>
+                        <td>25,336</td>
+                        <td>145,917</td>
+                        <td>267,499</td>
+                        <td>291,920</td>
+                        <td>324,895</td>
+                        <td>326,540</td>
+                        <td>325,733</td>
+                        <td>324,629</td>
+                        <td>324,676</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="sources">
+                <a href="https://www.openhub.net/repositories/compare" >Source: openhub.net</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

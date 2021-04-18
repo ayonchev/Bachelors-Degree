@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+}
+
+html, body { 
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#site-header {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    overflow: auto;
+    background-color: #2660A4;
+}
+
+#site-title {
+    color: #EDF7F6;
+    text-align: center;
+}
+
+#site-menu {
+    margin: 2rem 0 1rem 0;
+}
+
+#site-menu ul {
+    text-align: center;
+    padding: 0;
+}
+
+.nav-item {
+    list-style-type: none;
+    display: inline;
+    margin-right: 2rem;
+}
+
+.nav-item .link {
+    color: rgb(227, 226, 240);
+    text-decoration: none;
+}
+
+.nav-item .link:hover {
+    /* color: white;
+    text-shadow: 1px 1px 1px rgb(227, 226, 240); */
+}
+
+#main-content {
+    width: 60%;
+    margin: auto;
+}
+
+.article-section {
+    margin-top: 2rem;
+}
+
+.section-main-content { 
+    margin-top: 1.5rem;
+}
+
+#vcs-overview {
+    display: flex;
+    justify-content: space-between;
+}
+
+#vcs-overview p {
+    text-align: justify;
+    flex-basis: 55%;
+}
+
+#vcs-overview .image-container {
+    flex-basis: 40%;
+}
+
+.section-title {
+    text-align: center;
+    color: rgb(78, 81, 85);
+}
+
+.img { 
+    width: 100%;
+}
+
+#types-of-vcs {
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: center;
+}
+
+#types-of-vcs > div {
+    flex-basis: 42%;
+}
+
+#popularity-table {
+    border-collapse: collapse;
+    border-radius: 20px;
+}
+
+tr {
+    border-bottom: 1px solid rgb(78, 81, 85);
+    border-radius: 1em;
+}
+
+#popularity-table th, #popularity-table td {
+    padding: 0.35rem;
+}
+
+#sources {
+    text-align: right;
+}
+
+#popularity {
+    margin-bottom: 2rem;
+}
