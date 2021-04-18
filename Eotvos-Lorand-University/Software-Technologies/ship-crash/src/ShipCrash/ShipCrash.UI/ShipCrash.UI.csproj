@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\background.jpg" />
+    <None Remove="Images\background.png" />
+    <None Remove="Images\cannon-ball.png" />
+    <None Remove="Images\clouds.png" />
+    <None Remove="Images\fast-cannon-ball.png" />
+    <None Remove="Images\fast-ship.png" />
+    <None Remove="Images\fast-turtle-cannon.png" />
+    <None Remove="Images\island-tower-left.png" />
+    <None Remove="Images\island-tower.png" />
+    <None Remove="Images\island.png" />
+    <None Remove="Images\powerful-cannon-ball.png" />
+    <None Remove="Images\powerful-ship.png" />
+    <None Remove="Images\powerful-turtle-cannon.png" />
+    <None Remove="Images\ship.png" />
+    <None Remove="Images\turtle-cannon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\background.jpg" />
+    <Resource Include="Images\cannon-ball.png" />
+    <Resource Include="Images\clouds.png" />
+    <Resource Include="Images\fast-cannon-ball.png" />
+    <Resource Include="Images\fast-ship.png" />
+    <Resource Include="Images\fast-turtle-cannon.png" />
+    <Resource Include="Images\island-tower-left.png" />
+    <Resource Include="Images\island-tower.png" />
+    <Resource Include="Images\island.png" />
+    <Resource Include="Images\powerful-cannon-ball.png" />
+    <Resource Include="Images\powerful-ship.png" />
+    <Resource Include="Images\powerful-turtle-cannon.png" />
+    <Resource Include="Images\ship.png" />
+    <Resource Include="Images\turtle-cannon.png" />
+  </ItemGroup>
+
+</Project>

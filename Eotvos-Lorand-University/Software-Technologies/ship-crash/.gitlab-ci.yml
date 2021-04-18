@@ -1,0 +1,19 @@
+stages:
+  - build
+  - test
+
+before_script:
+  - cd src/ShipCrash
+  - dotnet restore
+
+# Build
+build_script:
+  stage: build
+  script:
+    - dotnet build ShipCrash.UI
+
+# Test
+test_script:
+  stage: test
+  script:
+    - dotnet test ShipCrash.Tests

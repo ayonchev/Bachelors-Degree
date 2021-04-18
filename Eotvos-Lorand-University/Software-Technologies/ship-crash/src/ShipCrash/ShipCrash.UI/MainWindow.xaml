@@ -1,0 +1,33 @@
+﻿<Window x:Class="ShipCrash.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShipCrash.UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900" Loaded="Window_Loaded" UseLayoutRounding="True">
+    <Canvas x:Name="gameField" Width="877" Height="420" VerticalAlignment="Center" MouseLeftButtonUp="PlaceAttackingTower" Margin="10,0,10,0">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Images/background.jpg" />
+        </Canvas.Background>
+        
+        <Label x:Name="livesLabel" Canvas.Top="0" Canvas.Right="600" HorizontalAlignment="Center" Content="{Binding Path=LifePoints, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="Lives: {0}" FontSize="22" FontWeight="Bold" Foreground="White">
+        </Label>
+        <Label x:Name="xpLabel" Canvas.Top="0" Canvas.Right="500" HorizontalAlignment="Center" Content="{Binding Path=ExperiencePoints, Mode=OneWay}" ContentStringFormat="XP: {0}" FontSize="22" FontWeight="Bold" Foreground="White">
+        </Label>
+        <Label x:Name="gameStateLabel" Canvas.Top="0" Canvas.Right="200" HorizontalAlignment="Center" Content="{Binding Path=GameState, Mode=OneWay}" ContentStringFormat="GameState: {0}" FontSize="22" FontWeight="Bold" Foreground="White">
+        </Label>
+        <!--<Image x:Name="island" Width="150" Source="Images/island.png" Canvas.Left="328" Canvas.Top="111" />-->
+        <StackPanel Canvas.Top="0" Canvas.Right="0" Width="100">
+            <Button x:Name="startButton" Content="Start" Canvas.Right="0" Canvas.Top="50"  Background="Transparent" FontSize="22" FontWeight="Bold" Foreground="White" Click="StartButtonClicked" />
+
+            <Button x:Name="pauseButton" Content="Pause" Canvas.Right="0" Canvas.Top="50" BorderBrush="#FF227486" Background="Transparent" FontSize="22" FontWeight="Bold" Foreground="White" Click="PauseButtonClicked" />
+
+            <Button x:Name="resumeButton" Content="Resume" Canvas.Right="0" Canvas.Top="50" BorderBrush="#FF227486" Background="Transparent" FontSize="22" FontWeight="Bold" Foreground="White" Click="ResumeButtonClicked" />
+
+            <Button x:Name="restartButton" Content="Restart" Canvas.Right="0" Canvas.Top="50" BorderBrush="#FF227486" Background="Transparent" FontSize="22" FontWeight="Bold" Foreground="White" Click="RestartButtonClicked" />
+
+            <Button x:Name="buy" Content="Buy" Canvas.Right="0" Canvas.Top="100" BorderBrush="#FF227486" Background="Transparent" FontSize="22" FontWeight="Bold" Foreground="White" Click="BuyButtonClicked" />
+        </StackPanel>
+    </Canvas>
+</Window>
